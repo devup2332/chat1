@@ -16,7 +16,7 @@ class InputLogin extends StatefulWidget {
 }
 
 class _InputLoginState extends State<InputLogin> {
-  bool showPass = false;
+  bool hideText = true;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,18 +36,18 @@ class _InputLoginState extends State<InputLogin> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: TextFormField(
               controller: widget.controller,
-              obscureText: showPass,
+              obscureText: hideText && widget.label != 'Email',
               style: Theme.of(context).textTheme.bodyMedium,
               decoration: InputDecoration(
                   suffixIcon: widget.isPassword
                       ? IconButton(
                           onPressed: () {
                             setState(() {
-                              showPass = !showPass;
+                              hideText = !hideText;
                             });
                           },
                           icon: Icon(
-                            showPass ? Icons.visibility : Icons.visibility_off,
+                            hideText ? Icons.visibility : Icons.visibility_off,
                             color: Theme.of(context).colorScheme.primary,
                           ),
                         )

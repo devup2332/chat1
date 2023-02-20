@@ -29,9 +29,8 @@ class _LoginScreenState extends State<LoginScreen> {
           onPressed: () {},
         ),
       ),
-      body: SingleChildScrollView(
-        child: SafeArea(
-            child: Padding(
+      body: SafeArea(
+        child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Form(
             key: _formKey,
@@ -145,10 +144,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     brand: 'google',
                     logo:
                         'http://pngimg.com/uploads/google/google_PNG19635.png'),
+                Expanded(
+                  child: Align(
+                    alignment: FractionalOffset.bottomCenter,
+                    child: Text(
+                        "Scale use cookies for analytics personalized content and ads. By using Scale's services you agree to this use of cookies."),
+                  ),
+                ),
               ],
             ),
           ),
-        )),
+        ),
       ),
     );
   }
