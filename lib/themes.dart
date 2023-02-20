@@ -20,16 +20,17 @@ AppBarTheme appBarThemeDark(BuildContext context) {
 
 ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
-      scaffoldBackgroundColor: bgPrimaryLight,
-      appBarTheme: appBarThemeLight(context),
-      textTheme: TextTheme(
-        bodyMedium: TextStyle(
-          color: Color(0xFF000000),
-        ),
-        titleLarge: TextStyle(color: Colors.black),
+    scaffoldBackgroundColor: bgPrimaryLight,
+    appBarTheme: appBarThemeLight(context),
+    textTheme: TextTheme(
+      bodyMedium: TextStyle(
+        color: Color(0xFF000000),
       ),
-      colorScheme: ColorScheme.light(primary: Colors.black),
-      inputDecorationTheme: InputDecorationTheme());
+      titleLarge: TextStyle(color: Colors.black),
+    ),
+    colorScheme: ColorScheme.light(primary: Colors.black),
+    inputDecorationTheme: InputDecorationTheme(),
+  );
 }
 
 ThemeData darkThemeData(BuildContext context) {
